@@ -33,6 +33,69 @@
 .place-order .cart-total button{
     margin-top: 30px;
 }
+
+
+:root .emaill {
+    background-color: black;
+
+}
+
+:root .streett {
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+:root .phonee {
+    background-color: black;
+    border: none;
+    color: white;
+}
+:root .phonee{
+    color: white;
+}
+
+
+.lightcolors .emaill {
+    background-color: white;
+    border: 0.5px solid gray;
+}
+
+.lightcolors .streett {
+    background-color: white;
+    border: 0.5px solid gray;
+    color: black;
+}
+
+
+.lightcolors .phonee {
+    background-color: white;
+    border: 0.5px solid gray;
+    color: black;
+}
+
+
+
+:root .multi-fields input {
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+
+
+
+.lightcolors .multi-fields input {
+    background-color: white;
+    border: 0.5px solid gray;
+    color: black;
+}
+
+
+:root .title {
+    color: white;
+}
+
 @media(max-width:750px){
     .place-order{
         flex-direction: column;

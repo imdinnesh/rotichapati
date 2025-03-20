@@ -62,14 +62,14 @@ const LoginPopup = ({ setShowLogin }) => {
           />
         </div>
         <div className="login-popup-inputs">
-          {currState === "Login" ?<></>:<input name="name" onChange={onChangeHandler} value={data.name} type="text" placeholder="Name" required />}
-          <input name="email" onChange={onChangeHandler} value={data.email} type="email" placeholder="Email" required />
-          <input name="password" onChange={onChangeHandler} value={data.password} type="password" placeholder="Password" required />
+          {currState === "Login" ?<></>:<input className="namee" name="name" onChange={onChangeHandler} value={data.name} type="text" placeholder="Name" required />}
+          <input className="emaill" name="email" onChange={onChangeHandler} value={data.email} type="email" placeholder="Email" required />
+          <input className="pass" name="password" onChange={onChangeHandler} value={data.password} type="password" placeholder="Password" required />
         </div>
         <button type="submit">{currState === "Sign Up" ? "Create accout" : "Login"}</button>
         <div className="login-popup-condition">
           <input type="checkbox" required />
-          <p>By continuing, I agree to the terms of use & privacy policy.</p>
+          <p className='continuee'>By continuing, I agree to the terms of use & privacy policy.</p>
         </div>
         {currState === "Login" ? (
           <p>

@@ -36,6 +36,38 @@
     cursor: pointer;
     color: #454545;
 }
+
+:root .my-orders-order button{
+    border: 1px solid tomato;
+    background-color: black;
+    color: white;
+}
+
+.lightcolors .my-orders-order button{
+    border: 1px solid #454545;
+    background-color: #ffe1e1;
+    color: #454545
+}
+
+
+:root .my-orders-order p b,
+:root .my-orders-order{
+    color: white;
+}
+
+.lightcolors .my-orders-order p b,
+.lightcolors .my-orders-order{
+    color: #454545;
+}
+
+
+:root .myordersp {
+    color: white; 
+}
+
+.lightcolors .myordersp {
+    color: black;
+}
 @media (max-width:750px){
     .my-orders-order{
         grid-template-columns: 2fr 0.5fr 2.5fr;

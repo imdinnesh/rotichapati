@@ -8,6 +8,7 @@
   scroll-behavior: smooth;
 }
 body{
+  background-color: var(--body-color);
   min-height: 100vh;
 }
 a{
