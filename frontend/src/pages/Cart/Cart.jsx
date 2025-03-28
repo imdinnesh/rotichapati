@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { StoreContext } from "../../context/StoreContext";
 import "./Cart.css";
 import {useNavigate} from 'react-router-dom'
+import { FaTrash } from "react-icons/fa";
 
 const Cart = () => {
   const { cartItems, food_list, removeFromCart, getTotalCartAmount, url } = useContext(StoreContext);
@@ -26,14 +27,14 @@ const Cart = () => {
           if (cartItems[item._id] > 0) {
             return (
               <div>
-                <div className="cart-items-title cart-items-item">
+                <div className="cart-items-title cart-items-item" >
                   <img src={url+"/images/"+item.image} alt="" />
                   <p>{item.name}</p>
                   <p>${item.price}</p>
-                  <p>{cartItems[item._id]}</p>
+                  <p style={{marginLeft:"25px"}}>{cartItems[item._id]}</p>
                   <p>${item.price * cartItems[item._id]}</p>
-                  <p onClick={() => removeFromCart(item._id)} className="cross">
-                    x
+                  <p onClick={() => removeFromCart(item._id)} className="cross" style={{marginLeft:"25%"}}>
+                  <FaTrash />
                   </p>
                 </div>
                 <hr />

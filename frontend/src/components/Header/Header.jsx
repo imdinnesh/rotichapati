@@ -12,7 +12,6 @@ const Header = () => {
           fugiat deserunt mollitia ea reprehenderit totam, tenetur alias.
           Cupiditate porro quisquam amet.
         </p>
-        <button className="btn">View Menu</button>
       </div>
     </div>
   );

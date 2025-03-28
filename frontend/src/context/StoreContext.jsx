@@ -6,9 +6,11 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
-  const url = "http://localhost:4000" //change it while deploying
+  const url = "http://localhost:4000"
   const [token,setToken] = useState("");
   const [food_list,setFoodList] = useState([])
+  const [loading, setLoading] = useState(false);
+
 
   const addToCart = async (itemId) => {
     if (!cartItems[itemId]) {
@@ -51,11 +53,13 @@ const StoreContextProvider = (props) => {
 
   useEffect(()=>{
         async function loadData(){
+          setLoading(true);
           await fetchFoodList();
             if(localStorage.getItem("token")){
               setToken(localStorage.getItem("token"));
               await loadCartData(localStorage.getItem("token"))
             }
+            setLoading(false);
         }
         loadData();
   },[])
@@ -69,8 +73,11 @@ const StoreContextProvider = (props) => {
     getTotalCartAmount,
     url,
     token,
-    setToken
+    setToken,
+    loading,
+    setLoading
   };
+  
 
   return (
     <StoreContext.Provider value={contextValue}>
