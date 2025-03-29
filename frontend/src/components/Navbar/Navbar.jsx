@@ -64,6 +64,7 @@ const Navbar = ({ setShowLogin }) => {
     if (searchTerm.trim()) {
       navigate(`/search?query=${searchTerm}`);
     }
+    setShowSearchDrawer(false);
   };
 
   useEffect(() => {
