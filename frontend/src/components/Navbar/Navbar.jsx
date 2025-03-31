@@ -35,15 +35,15 @@ const Navbar = ({ setShowLogin }) => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  useEffect(() => {
-    setAllItems([
-      { id: 1, name: "Chicken Biryani" },
-      { id: 2, name: "Paneer Butter Masala" },
-      { id: 3, name: "Mushroom Tikka" },
-      { id: 4, name: "Veg Manchurian" },
-      { id: 5, name: "Egg Curry" },
-    ]);
-  }, []);
+  // useEffect(() => {
+  //   setAllItems([
+  //     { id: 1, name: "Chicken Biryani" },
+  //     { id: 2, name: "Paneer Butter Masala" },
+  //     { id: 3, name: "Mushroom Tikka" },
+  //     { id: 4, name: "Veg Manchurian" },
+  //     { id: 5, name: "Egg Curry" },
+  //   ]);
+  // }, []);
 
   useEffect(() => {
     const savedToken = localStorage.getItem("token");
@@ -215,11 +215,11 @@ const Navbar = ({ setShowLogin }) => {
                   searchTerm.trim() ? searchTerm : null,
                   "Chicken Biryani",
                   "Paneer Butter Masala",
-                  "Mushroom Tikka",
-                  "Veg Manchurian",
-                  "Egg Curry",
-                  "Butter Naan",
-                  "Dal Makhani",
+                  "Grilled Sandwich",
+                  "Cheese Pasta",
+                  "Butterscotch Cake",
+                  "Vanilla Ice Cream",
+                  "Veg Roll",
                 ]
                   .filter(Boolean)
                   .map((item) => (
