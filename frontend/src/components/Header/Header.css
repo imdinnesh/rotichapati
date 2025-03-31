@@ -1,9 +1,11 @@
 .header{
     height: 34vw;
     margin: 30px 1px;
-    background: url('/src/assets/header_img.png') no-repeat;
-    background-size: contain;
+    background: url('/src/assets/food-del-banner.png') no-repeat;
+    background-size: cover;
     position: relative;
+    border-radius: 20px;
+    border: 1px solid tomato;
 }
 .header-contents{
     position: absolute;
